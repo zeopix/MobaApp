@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MobaApp</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- iOS Checkboxes: https://github.com/dnagir/ios-checkboxes -->
+    <script src="components/jquery/jquery.1.9.0.min.js"></script>
+    <link rel="stylesheet" href="assets/ios-checkboxes/ios-checkboxes-5d38e09413b47993266b4343b181d2f9.css">
+    <script src="assets/ios-checkboxes/ios-checkboxes-767fc292f6a04316d3a54b18f4637b57.js"></script>
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link rel="stylesheet" href="components/ratchet/ratchet.css">
+    <link rel="stylesheet" href="components/junior/stylesheets/junior.css">
+    <link rel="stylesheet" href="assets/css/default.css"/>
+
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/spin.js"></script>
+    <script src="assets/js/json.js"></script>
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="components/ratchet/ratchet.js"></script>
+    
+    <!-- Junior Deps -->
+    <script src="components/junior/javascripts/modernizr.custom.15848.js"></script>
+    <script src="components/junior/javascripts/zepto.min.js"></script>
+    <script src="components/junior/javascripts/zepto.flickable.min.js"></script>
+    <script src="components/junior/javascripts/lodash.min.js"></script>
+    <script src="components/junior/javascripts/backbone-min.js"></script>
+    <script src="components/backbone/offline.js"></script>
+    <script src="components/junior/javascripts/junior.js"></script>
+    <script src="components/backbone/backbone.touch.js"></script>
+    
+    <script>
+    //configuración de la aplicación
+    var server = function(route){
+        return 'http://moba/app_dev.php/api/'+route;
+    }
+    </script>
+
+    <!-- App Code -->
+    <script src="app/model/Hero.js"></script>
+    <script src="app/model/Build.js"></script>
+
+   <script src="app/view/HerosView.js"></script>
+   <script src="app/view/BuildView.js"></script>
+   <script src="app/view/HeroDetailView.js"></script>
+    
+
+    <script src="app/router.js"></script>
+
+    <!-- Cordova Notifications -->
+    <script type="text/javascript" src="components/cordova/cordova-2.4.0.js"></script>
+    
+
+
+  </head>
+  <body>
+    
+<div id="app-container">
+    <div id="app-main">
+      
+    </div>
+  </div>
+
+  </body>
+</html>
