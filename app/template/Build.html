@@ -1,10 +1,18 @@
 <!-- Make sure all your bars are the first things in your <body> -->
       <header class="bar-title">
-        <h1 class="title">Build...</h1>
+        <a class="button back button-prev">
+          Atrás
+        </a>
+        <h1 class="title"><% if(hero){ %><%= hero.name %> Guide<% }else{ %>cargando...<% } %></h1>
       </header>
 
       <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
       <div class="content">
-	        Y esto y lo otro
+	        
+	        <div class="content-padded">
+	        	Cargando la build...
+	        </div>
+
+	        <%= _.template(tpl.get('Build/Menu'))({'active':'info'}) %>
 
       </div>

@@ -1,0 +1,13 @@
+
+	<% for(id in build.bags){ %>
+	<% console.log(id) %>
+	<n4><%= build.bags[id].name %></h4>
+		<hr>
+		<% for(itemId in build.bags[id].items){ %>
+		<% var ritems = items.where({sid:parseInt(build.bags[id].items[itemId])});
+			var item = ritems[0].attributes;
+		 %>
+		<img src="<%= item.image %>" width="70px" style="width:70px">
+		<% } %>
+		<br><br>
+	<% } %>

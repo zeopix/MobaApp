@@ -1,6 +1,5 @@
 var HerosView = Jr.View.extend({
     initialize:function () {
-        app.di.heros = new Heros();
         app.di.heros.fetch();
         app.di.heros.on('add reset', this.render, this);
     },
@@ -14,13 +13,8 @@ var HerosView = Jr.View.extend({
         
       return this;
     },
-    events: {'click .hero.item':'heroClick', 'click .back.button':'goBack' }
+    events: {'click .hero.item':'heroClick'}
     ,
-  goBack: function(){
-    alert("back")
-    window.history.back();
-    
-  },
 heroClick: function(elm){
       var uid=$(elm.currentTarget).attr("hero-id");
 

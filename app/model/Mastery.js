@@ -1,12 +1,12 @@
-var Build = Backbone.Model.extend({
+var Mastery = Backbone.Model.extend({
     idAttribute: "id"
 });
 
-var Builds = Backbone.Collection.extend({
+var Masteries = Backbone.Collection.extend({
     model: Build,
-    url: server('builds/'),
+    url: server('masteries/'),
     initialize: function(){
-       this.storage = new Offline.Storage('builds',this)
+       this.storage = new Offline.Storage('masteries',this)
     },
 
     sync: function(method, model, options){  
@@ -15,6 +15,7 @@ var Builds = Backbone.Collection.extend({
       if(typeof(options.data) == "undefined"){
         options.data = {};
       }
+      options.data._method = method;
     if(method=="full"){
         options.data._method = "read";
         return this.storage.sync.full(options);

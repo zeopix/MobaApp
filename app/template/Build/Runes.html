@@ -1,0 +1,13 @@
+
+<table width="100%" style="font-size:22px" cellspacing="10" cellpadding="20">
+	<% for(item in build.runes){  
+		var result = runes.where({sid:parseInt(build.runes[item].id)});
+		var rune = result[0];
+
+		%>	
+	<tr>	
+		<td><img src="<%= rune.attributes.image %>" width="40px"><%= rune.attributes.name %></td>
+		<td><%= build.runes[item].qty %></td>
+	</tr>
+	<% } %>
+</table>

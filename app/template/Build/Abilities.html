@@ -1,0 +1,27 @@
+
+<table width="100%" style="font-size:22px" cellspacing="10" cellpadding="20">
+	<%
+		var qs = abilities.where({sid:parseInt(build.abilities[1].id)});
+		var ws = abilities.where({sid:parseInt(build.abilities[2].id)});
+		var es = abilities.where({sid:parseInt(build.abilities[3].id)});
+		var rs = abilities.where({sid:parseInt(build.abilities[4].id)});
+		var q = qs[0].attributes;
+		var w = ws[0].attributes;
+		var e = es[0].attributes;
+		var r = rs[0].attributes;
+	%>
+	<tr>
+		<td><img src="<%= q.image %>"></td>
+		<td><img src="<%= w.image %>"></td>
+		<td><img src="<%= e.image %>"></td>
+		<td><img src="<%= r.image %>"></td>
+	</tr>
+	<% for(var i=1;i<19;i++){ %>
+	<tr>
+		<td<% if(_.indexOf(build.abilities[1].levels,i.toString()) > -1){ %> style="background-color:red"<% } %>><%= i%></td>
+		<td<% if(_.indexOf(build.abilities[2].levels,i.toString()) > -1){ %> style="background-color:red"<% } %>><%= i%></td>
+		<td<% if(_.indexOf(build.abilities[3].levels,i.toString()) > -1){ %> style="background-color:red"<% } %>><%= i%></td>
+		<td<% if(_.indexOf(build.abilities[4].levels,i.toString()) > -1){ %> style="background-color:red"<% } %>><%= i%></td>
+	</tr>
+	<% } %>
+</table>

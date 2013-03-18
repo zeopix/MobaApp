@@ -1,9 +1,5 @@
 var HeroDetailView = Jr.View.extend({
     initialize:function () {
-    	if(!app.di.builds){
-        	app.di.builds = new Builds();
-        }
-
         app.di.builds.fetch({data:{hero:this.options.hero}});
         app.di.builds.on('add reset', this.render, this);
     },
@@ -17,7 +13,11 @@ var HeroDetailView = Jr.View.extend({
         
       return this;
     },
-    events: {'click .build.item':'buildClick' },
+    events: {'click .build.item':'buildClick', 'click .back.button':'goBack'  },
+  goBack: function(){
+    window.history.back();
+    
+  },
     buildClick: function(elm){
       var uid=$(elm.currentTarget).attr("build-id");
 

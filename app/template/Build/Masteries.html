@@ -1,0 +1,14 @@
+
+<table width="100%" style="font-size:12px" cellspacing="10" cellpadding="20">
+	<% for(item in build.mastery){  
+		var result = masteries.where({sid:parseInt(build.mastery[item].id)});
+		var mastery = result[0];
+		console.log(build.mastery);
+		%>	
+
+	<tr>	
+		<td><img src="<%= mastery.attributes.image %>" width="40px"><%= mastery.attributes.description %></td>
+		<td style="font-size:22px"><%= build.mastery[item].levels %></td>
+	</tr>
+	<% } %>
+</table>
