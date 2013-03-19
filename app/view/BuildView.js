@@ -30,6 +30,7 @@ var BuildView = Jr.View.extend({
     },
     events: { 
       'click .back.button':'goBack',
+      'click .button.fav':'addFav',
       'click .build.menu .stats a':'goStats',
       'click .build.menu .runes a':'goRunes',
       'click .build.menu .abilities a':'goAbilities',
@@ -38,6 +39,20 @@ var BuildView = Jr.View.extend({
     },
     goBack: function(){
       window.history.back();
+    },
+    addFav: function(){
+      //create Favorite
+      var favorite = new Favorite({
+        'hero' : this.hero.attributes,
+        'build' : this.build.attributes,
+        });
+      Offline.localSync("create",favorite,{success:function(){
+        //message saved, you can reload page
+        app.di.favorites.fetch({local:true});
+        alert("Guide added to your favorites.")
+      }},app.di.favorites.storage);
+      //push
+      //alert
     },
     goRunes: function(){
       this.selectTab('runes');

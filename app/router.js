@@ -2,6 +2,7 @@ var AppRouter = Jr.Router.extend({
     routes: {
       '': 'heros',
       'hero/:id': 'hero',
+      'favorites': 'favorites',
       'hero/:hero/build/:id': 'build',
     },
     heros: function(){
@@ -11,6 +12,10 @@ var AppRouter = Jr.Router.extend({
     hero: function(id){
       var heroView = new HeroDetailView({hero:id});
       this.renderView(heroView);
+    },
+    favorites: function(){
+      var favoritesView = new FavoritesView();
+      this.renderView(favoritesView);
     },
     build: function(hero,id){
       var buildView = new BuildView({build:id,hero:hero});
@@ -23,6 +28,7 @@ var AppRouter = Jr.Router.extend({
       masteries: new Masteries(),
       spells: new Spells(),
       items: new Items(),
+      favorites: new Favorites(),
       abilities: new Abilities()
     }
 
@@ -34,7 +40,8 @@ $(document).ready(function () {
     //Asi cargamos las vistas directamente en cache
     tpl.loadTemplates(
       [ "HeroList","HeroListItem","HeroBuildList","HeroBuildListItem","Menu",
-      "Build","Build/Menu","Build/Stats","Build/Runes","Build/Abilities","Build/Items","Build/Masteries"
+      "Build","Build/Menu","Build/Stats","Build/Runes","Build/Abilities","Build/Items","Build/Masteries",
+      "Favorites","FavoritesItem"
         ],
         function () {
             app = new AppRouter();
@@ -42,6 +49,7 @@ $(document).ready(function () {
 
             app.di.builds.fetch({local:true});
             app.di.heros.fetch({local:true});
+            app.di.favorites.fetch({local:true});
 
             //preload from storage
             app.di.runes.fetch({local:true});
