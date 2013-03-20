@@ -7,10 +7,11 @@ var HerosView = Jr.View.extend({
     filterHero: function(){
       var query = this.$el.find("input.filter").val();
       if(query.length > 0){
+      console.log(query);
         this.$el.find('ul.list li').css('display','none');
-        this.$el.find('ul.list li a[dataname~="'+query+'"]').each(function(){
-          console.log(this)
-          this.parent().css("display","block");
+        this.$el.find('ul.list li a[dataname*="'+query+'"]').each(function(){
+ 
+          $(this).parent().css("display","block");
         })
       }else{
         this.$el.find('ul.list li').css('display','block');
