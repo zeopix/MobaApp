@@ -1,0 +1,59 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "title": "HeroName",
+        "id": "HeroViewElm",
+        "designer|userClassName": "HeroView",
+        "designer|userAlias": "heroview",
+        "layout": "card"
+    },
+    "designerId": "ea038793-bbf7-4110-97b1-300a0873fcd2",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "title",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "BuildsView",
+                "itemId": "mylist1",
+                "designer|userClassName": "MyList1",
+                "designer|displayName": "buildlist",
+                "store": "BuildStore"
+            },
+            "designerId": "016857c0-cdad-4f99-829d-f5894ebbec3b",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div>{title}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "e4d563e6-a836-4429-97ad-9332f52428a4"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "name": "MobaApp",
+    "settings": {
+        "urlPrefix": "http://mobaapp/",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.0",
+    "xdsBuild": 894,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000499,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "58e82eba-dfb1-424c-87e4-c9da07c3c50c": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "e661569d-0a8c-41fc-a5b7-af9202ca9389": {
+            "paths": [
+                "metadata/model/Hero",
+                "app/model/override/Hero.js",
+                "app/model/Hero.js"
+            ],
+            "className": "Hero"
+        },
+        "74e213d7-d1d6-45a0-9f57-86aa4aea9769": {
+            "paths": [
+                "metadata/store/HerosStore",
+                "app/store/override/HerosStore.js",
+                "app/store/HerosStore.js"
+            ],
+            "className": "HerosStore"
+        },
+        "67c9d4c3-0524-4c4c-ad1c-bededf3707a6": {
+            "paths": [
+                "metadata/view/Main",
+                "app/view/override/Main.js",
+                "app/view/Main.js"
+            ],
+            "className": "Main"
+        },
+        "87fda7df-ce2d-4984-9cab-1b34d3a49e3d": {
+            "paths": [
+                "metadata/controller/HeroListController",
+                "app/controller/override/HeroListController.js",
+                "app/controller/HeroListController.js"
+            ],
+            "className": "HeroListController"
+        },
+        "c5a8dfc6-3dea-469d-8e85-34a509662a1a": {
+            "paths": [
+                "metadata/store/BuildStore",
+                "app/store/override/BuildStore.js",
+                "app/store/BuildStore.js"
+            ],
+            "className": "BuildStore"
+        },
+        "b7af31ed-0441-46ef-9eb3-c1ce8064f40c": {
+            "paths": [
+                "metadata/model/Build",
+                "app/model/override/Build.js",
+                "app/model/Build.js"
+            ],
+            "className": "Build"
+        },
+        "ea038793-bbf7-4110-97b1-300a0873fcd2": {
+            "paths": [
+                "metadata/view/HeroView",
+                "app/view/override/HeroView.js",
+                "app/view/HeroView.js"
+            ],
+            "className": "HeroView"
+        },
+        "3b24d811-ee4b-40c8-a1c5-7224466ac61c": {
+            "paths": [
+                "metadata/view/BuildPanel",
+                "app/view/override/BuildPanel.js",
+                "app/view/BuildPanel.js"
+            ],
+            "className": "BuildPanel"
+        },
+        "fe19349a-5528-4794-9c18-db627f3dadf1": {
+            "paths": [
+                "metadata/view/BuildSlider",
+                "app/view/override/BuildSlider.js",
+                "app/view/BuildSlider.js"
+            ],
+            "className": "BuildSlider"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "67c9d4c3-0524-4c4c-ad1c-bededf3707a6",
+            "fe19349a-5528-4794-9c18-db627f3dadf1",
+            "ea038793-bbf7-4110-97b1-300a0873fcd2",
+            "3b24d811-ee4b-40c8-a1c5-7224466ac61c"
+        ],
+        "store": [
+            "74e213d7-d1d6-45a0-9f57-86aa4aea9769",
+            "c5a8dfc6-3dea-469d-8e85-34a509662a1a"
+        ],
+        "controller": [
+            "87fda7df-ce2d-4984-9cab-1b34d3a49e3d"
+        ],
+        "model": [
+            "e661569d-0a8c-41fc-a5b7-af9202ca9389",
+            "b7af31ed-0441-46ef-9eb3-c1ce8064f40c"
+        ],
+        "resource": [
+            "58e82eba-dfb1-424c-87e4-c9da07c3c50c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

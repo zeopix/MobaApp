@@ -1,0 +1,153 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main",
+        "designer|initialView": true
+    },
+    "designerId": "67c9d4c3-0524-4c4c-ad1c-bededf3707a6",
+    "cn": [
+        {
+            "type": "Ext.navigation.View",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Nav",
+                "iconCls": "info",
+                "designer|userClassName": "MyNavigationView"
+            },
+            "designerId": "b0cf9cf8-99da-47a6-b5d7-76e61e46151d",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Heroes",
+                        "layout": null,
+                        "itemId": "mylist",
+                        "designer|userClassName": "MyList",
+                        "emptyText": "No hay heroes.",
+                        "store": "HeroStore"
+                    },
+                    "designerId": "ed947ebc-accb-4d0c-83ea-b704f1c3e8b8",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "layout",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "itemId": "mysearchfield",
+                                "designer|userClassName": "MySearchField",
+                                "label": "Buscar"
+                            },
+                            "designerId": "070ab2a3-1145-4ffe-94a3-de59f3fd93be",
+                            "cn": [
+                                {
+                                    "type": "delegateeventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onSearchfieldKeyup",
+                                        "fn": "onSearchfieldKeyup",
+                                        "implHandler": [
+                                            "var store = Ext.getStore('HeroStore');",
+                                            "store.clearFilter(true);",
+                                            "store.filter('name',textfield.getValue());",
+                                            ""
+                                        ],
+                                        "name": "keyup",
+                                        "designer|targetType": "Ext.field.Search"
+                                    },
+                                    "designerId": "5d5819d1-8abe-480d-b1ac-74888dbfee06"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div><img width=\"50px\" height=\"50px\" style=\"width:50px; height:50px\" src=\"{image}\"> {name}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "06c68742-e24b-4751-af40-9743f4df97e2"
+                        },
+                        {
+                            "type": "delegateeventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onListItemTap",
+                                "fn": "onListItemTap",
+                                "implHandler": [
+                                    "var view = Ext.create('MobaApp.view.HeroView');",
+                                    "var store = Ext.create('MobaApp.store.BuildStore');",
+                                    "store.load({params: { hero: record.data.id }});",
+                                    "view.getItems().getAt(0).setStore(store);",
+                                    "view.setTitle(record.data.name);",
+                                    "target.up('navigationview').push(view);",
+                                    ""
+                                ],
+                                "name": "itemtap",
+                                "designer|targetType": "Ext.dataview.List"
+                            },
+                            "designerId": "4e5d000f-9d32-4289-a94c-6979cd1d6e75"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "designer|userClassName": "MyTabBar"
+            },
+            "designerId": "bc94f479-a216-4819-be33-7526c576547e"
+        }
+    ]
+}

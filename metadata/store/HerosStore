@@ -1,0 +1,45 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Hero",
+        "storeId": "HeroStore",
+        "designer|userClassName": "HerosStore"
+    },
+    "designerId": "74e213d7-d1d6-45a0-9f57-86aa4aea9769",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy",
+                "designer|displayName": "HerosProxy",
+                "url": "http://moba/app_dev.php/api/heros/"
+            },
+            "designerId": "a6984bba-a8ed-4eba-8e3e-ec944848e895",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader"
+                    },
+                    "designerId": "faad8c1a-5391-4b95-8adc-59d88c099417"
+                }
+            ]
+        }
+    ]
+}

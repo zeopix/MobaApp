@@ -1,0 +1,47 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Build",
+        "storeId": "BuildStore",
+        "designer|userClassName": "BuildStore",
+        "designer|userAlias": "BuildStore"
+    },
+    "designerId": "c5a8dfc6-3dea-469d-8e85-34a509662a1a",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyJsonPProxy1",
+                "extraParams": [
+                    "{hero:40}"
+                ],
+                "url": "http://moba/app_dev.php/api/builds/"
+            },
+            "designerId": "c682ab79-af30-4d89-9099-feead11196ef",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader1"
+                    },
+                    "designerId": "b89d457f-4585-411f-9250-57981a713338"
+                }
+            ]
+        }
+    ]
+}

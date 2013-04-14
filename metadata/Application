@@ -1,0 +1,47 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Hero",
+            "Build"
+        ],
+        "stores": [
+            "HerosStore",
+            "BuildStore"
+        ],
+        "views": [
+            "Main",
+            "HeroView",
+            "BuildPanel",
+            "BuildSlider"
+        ],
+        "controllers": [
+            "HeroListController"
+        ],
+        "name": "MobaApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "224e5dd7-a4fd-4f1c-8fac-46d0a7f60823"
+        }
+    ]
+}

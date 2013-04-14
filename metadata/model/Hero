@@ -1,0 +1,196 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Hero"
+    },
+    "designerId": "e661569d-0a8c-41fc-a5b7-af9202ca9389",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "name",
+                "designer|userClassName": "field"
+            },
+            "designerId": "04694f13-0932-44fb-bbbb-d08a52a9a00a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "riotPoints",
+                "designer|userClassName": "field1"
+            },
+            "designerId": "77082782-3b0a-4591-99d8-d4da2be7a5ee"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "influencePoints",
+                "designer|userClassName": "field2"
+            },
+            "designerId": "386ea51b-ab81-4a11-9267-daacc644d951"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "image",
+                "designer|userClassName": "field3"
+            },
+            "designerId": "34277ea1-6d3e-404c-9f70-a64bb7649602"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tags",
+                "designer|userClassName": "field4"
+            },
+            "designerId": "a5a4117c-2aac-4094-9bcf-3e1dafc352a6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "health",
+                "designer|userClassName": "field5"
+            },
+            "designerId": "a08ad0ce-b841-4d83-b0b2-4b49580b8607"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "critical",
+                "designer|userClassName": "field6"
+            },
+            "designerId": "2324ea6f-dcb7-4d09-b104-9a42a4e071d8"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "mana",
+                "designer|userClassName": "field7"
+            },
+            "designerId": "6e336b2a-5042-488b-9055-ef7b1cc5cf0b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "speed",
+                "designer|userClassName": "field8"
+            },
+            "designerId": "082d2720-ffe4-4a8f-a39e-6e8f38680195"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "armor",
+                "designer|userClassName": "field9"
+            },
+            "designerId": "a5fbcb83-2d2b-4497-8368-ae29a1e729fa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "resist",
+                "designer|userClassName": "field10"
+            },
+            "designerId": "7a943fc0-21b7-4eb9-a07c-024f1309f9a7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "healthRegen",
+                "designer|userClassName": "field11"
+            },
+            "designerId": "5458c157-be1f-4ecb-9b21-9ddc590ef094"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "manaRegen",
+                "designer|userClassName": "field12"
+            },
+            "designerId": "14bfe51a-9f48-46c5-ab2f-eb960654b472"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "attackRange",
+                "designer|userClassName": "field13"
+            },
+            "designerId": "bd9a3503-261c-4c23-8003-622d8449776c"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "docked": "top",
+        "designer|userClassName": "BuildSlider",
+        "layout": "vbox"
+    },
+    "designerId": "fe19349a-5528-4794-9c18-db627f3dadf1",
+    "cn": [
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": null,
+                "designer|userClassName": "MyCarousel1"
+            },
+            "designerId": "c15a27f7-3626-4a44-b8f5-b799891453a4",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "layout",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "hey you",
+                        "designer|userClassName": "MyContainer5"
+                    },
+                    "designerId": "8fd2148a-3108-4fbe-840d-82a1f8dcdbd1"
+                }
+            ]
+        }
+    ]
+}

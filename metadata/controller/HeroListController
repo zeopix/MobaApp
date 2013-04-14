@@ -1,0 +1,103 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "stores": [
+            "HerosStore"
+        ],
+        "designer|userClassName": "HeroListController"
+    },
+    "designerId": "87fda7df-ce2d-4984-9cab-1b34d3a49e3d",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "//var store = Ext.getStore('HeroStore');",
+                    "//store.load();"
+                ]
+            },
+            "designerId": "7774083b-c760-4ac3-8b0a-dfaf20a865fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "heroview",
+                "autoCreate": true,
+                "ref": "heroview",
+                "selector": "#HeroViewElm",
+                "xtype": "heroview"
+            },
+            "designerId": "83f1df09-1ee3-4146-88bb-347d3ad7757c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "heroList",
+                "ref": "heroList",
+                "selector": "#HeroViewElm list"
+            },
+            "designerId": "f5943c03-302e-416d-8e40-ababe5fd681a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListItemTap",
+                "fn": "onListItemTap",
+                "implHandler": [
+                    "var panel = Ext.create('MobaApp.view.BuildSlider');",
+                    "this.getNav().push(panel);",
+                    "//target.up('navigationview').push(panel);",
+                    "alert(\"hi\")"
+                ],
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "heroList"
+            },
+            "designerId": "e7d052e9-84b7-4c7f-b4f5-c83c590c3d84"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "nav",
+                "ref": "nav",
+                "selector": "navigationview"
+            },
+            "designerId": "a3c19a78-39e6-4741-8fc6-6d8686514560"
+        }
+    ]
+}
