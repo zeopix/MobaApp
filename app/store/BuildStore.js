@@ -30,7 +30,7 @@ Ext.define('MobaApp.store.BuildStore', {
             extraParams: {
                 hero: 40
             },
-            url: 'http://moba/app_dev.php/api/builds/',
+            url: 'http://api.mobawebapp.com/api/builds/',
             reader: Ext.create('MobaApp.reader.Builds',{
                 type:'json'
             })

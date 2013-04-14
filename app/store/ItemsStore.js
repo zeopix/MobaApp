@@ -31,7 +31,7 @@ Ext.define('MobaApp.store.ItemsStore', {
         },
         serverProxy: {
            type: 'jsonp',
-           url: 'http://moba/app_dev.php/api/items/',
+           url: 'http://api.mobawebapp.com/api/items/',
            reader: {
               type: 'json',
            }

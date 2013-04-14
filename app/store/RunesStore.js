@@ -31,7 +31,7 @@ Ext.define('MobaApp.store.RunesStore', {
         },
         serverProxy: {
            type: 'jsonp',
-           url: 'http://moba/app_dev.php/api/runes/',
+           url: 'http://api.mobawebapp.com/api/runes/',
            reader: {
               type: 'json',
            }

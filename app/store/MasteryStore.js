@@ -31,7 +31,7 @@ Ext.define('MobaApp.store.MasteryStore', {
         },
         serverProxy: {
            type: 'jsonp',
-           url: 'http://moba/app_dev.php/api/masteries/',
+           url: 'http://api.mobawebapp.com/api/masteries/',
            reader: {
               type: 'json',
            }

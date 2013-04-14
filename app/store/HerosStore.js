@@ -26,7 +26,7 @@ Ext.define('MobaApp.store.HerosStore', {
         storeId: 'HeroStore',
         proxy: {
             type: 'jsonp',
-            url: 'http://moba/app_dev.php/api/heros/',
+            url: 'http://api.mobawebapp.com/api/heros/',
             reader: {
                 type: 'json'
             }
